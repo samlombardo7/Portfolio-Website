@@ -73,10 +73,10 @@ a {
   width: 33%;
 }
  /* end grid fallback */
-@supports (display: grid) {
-  .project-list
+@supports (display: grid)
+
   {
-    display: grid;
+    .display: grid;
     /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
@@ -181,9 +181,11 @@ button {
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+}
   .navigation-list li {
     background-color: #357b70;
   }
+  
   
   .navigation-list li .main-paragraph .navigation-list__item .navigation-list__item--active:hover {
     background-color: green;
@@ -248,9 +250,21 @@ transition: [transition-property] [transition-duration] [transition-timing-funct
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   transition: 0.2s opacity;
 }
+%button-shared {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  transition: 0.2s opacity;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
 .button {
   @extend %button-shared;
-  background-color: var(--primary-color);
+  background-color: $primary-color;
 }
 
 
